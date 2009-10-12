@@ -1,0 +1,29 @@
+<h1>Listing risks</h1>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Goal</th>
+    <th>Risk</th>
+  </tr>
+
+<% @risks.each do |risk| %>
+  <tr>
+    <td><%=h risk.event.description %></td>
+    <td><%=h risk.goal.description %></td>
+    <td><%=h risk.description %></td>
+    <td><%= link_to 'Show', risk %></td>
+    <td><%= link_to 'Edit', edit_risk_path(risk) %></td>
+    <td><%= link_to 'Destroy', risk, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Event', risk_event_path(risk) %></td>
+    <td><%= link_to 'Goal', risk_goal_path(risk) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New risk', new_risk_path %>
+<%= link_to 'Risks', risks_path %>
+<%= link_to 'Goals', goals_path %>
+<%= link_to 'Events', events_path %>

@@ -1,0 +1,31 @@
+<h1>Listing goals</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Action</th>
+    <th>Target</th>
+    <th>Deviation</th>
+    <th>Measure</th>
+  </tr>
+
+<% @goals.each do |goal| %>
+  <tr>
+    <td><%=h goal.description %></td>
+    <td><%=h goal.action %></td>
+    <td><%=h goal.target %></td>
+    <td><%=h goal.deviation %></td>
+    <td><%=h goal.measure %></td>
+    <td><%= link_to 'Show', goal %></td>
+    <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
+    <td><%= link_to 'Destroy', goal, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New goal', new_goal_path %>
+<%= link_to 'Risks', risks_path %>
+<%= link_to 'Goals', goals_path %>
+<%= link_to 'Events', events_path %>

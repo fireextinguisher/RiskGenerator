@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  description: MyText
+  action: MyString
+  target: MyString
+  deviation: MyString
+  measure: MyString
+
+two:
+  description: MyText
+  action: MyString
+  target: MyString
+  deviation: MyString
+  measure: MyString

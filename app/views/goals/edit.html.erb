@@ -1,0 +1,32 @@
+<h1>Editing goal</h1>
+
+<% form_for(@goal) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :action %><br />
+    <%= f.text_field :action %>
+  </p>
+  <p>
+    <%= f.label :target %><br />
+    <%= f.text_field :target %>
+  </p>
+  <p>
+    <%= f.label :deviation %><br />
+    <%= f.text_field :deviation %>
+  </p>
+  <p>
+    <%= f.label :measure %><br />
+    <%= f.text_field :measure %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @goal %> |
+<%= link_to 'Back', goals_path %>

@@ -1,0 +1,19 @@
+<h1>New risk</h1>
+
+<% form_for(@risk) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :event %><br />
+    <%= f.collection_select :event_id, @events, :id, :description  %><br />
+  </p>
+  <p>
+    <%= f.label :goal %><br />
+    <%= f.collection_select :goal_id, @goals, :id, :description %><br />
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', risks_path %>

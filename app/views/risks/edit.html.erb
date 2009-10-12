@@ -1,0 +1,20 @@
+<h1>Editing risk</h1>
+
+<% form_for(@risk) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :event %><br />
+    <%= f.text_field :event %>
+  </p>
+  <p>
+    <%= f.label :goal %><br />
+    <%= f.text_field :goal %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @risk %> |
+<%= link_to 'Back', risks_path %>

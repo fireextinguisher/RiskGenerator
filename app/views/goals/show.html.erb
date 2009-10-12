@@ -1,0 +1,28 @@
+<p>
+  <b>Description:</b>
+  <%=h @goal.description %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%=h @goal.action %>
+</p>
+
+<p>
+  <b>Target:</b>
+  <%=h @goal.target %>
+</p>
+
+<p>
+  <b>Deviation:</b>
+  <%=h @goal.deviation %>
+</p>
+
+<p>
+  <b>Measure:</b>
+  <%=h @goal.measure %>
+</p>
+
+
+<%= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Back', goals_path %>
