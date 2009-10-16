@@ -1,11 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :risks, :has_one => [:goal, :event]
+  map.resources :risks
 
-  map.resources :events
+  map.resources :events, :has_many => :risks
   
   map.resources :comments
 
-  map.resources :goals
+  map.resources :goals, :has_many => :risks
 
   map.resources :posts, :has_many => :comments
 

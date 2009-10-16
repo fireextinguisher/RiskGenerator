@@ -15,8 +15,8 @@
     <td><%= link_to 'Show', risk %></td>
     <td><%= link_to 'Edit', edit_risk_path(risk) %></td>
     <td><%= link_to 'Destroy', risk, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><%= link_to 'Event', risk_event_path(risk) %></td>
-    <td><%= link_to 'Goal', risk_goal_path(risk) %></td>
+    <td><%= link_to 'Event', event_path(risk.event) %></td>
+    <td><%= link_to 'Goal', goal_path(risk.goal) %></td>
   </tr>
 <% end %>
 </table>
