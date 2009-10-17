@@ -8218,3 +8218,41 @@ Rendering risks/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
   [4;35;1mGoal Load (0.0ms)[0m   [0mSELECT * FROM "goals" WHERE ("goals"."id" = 2) [0m
 Completed in 375ms (View: 344, DB: 0) | 200 OK [http://localhost/risks]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-17 13:29:43) [GET]
+Rendering home/index
+Completed in 203ms (View: 203, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EventsController#index (for 127.0.0.1 at 2009-10-17 13:29:46) [GET]
+  [4;36;1mEvent Load (32.0ms)[0m   [0;1mSELECT * FROM "events" [0m
+Rendering template within layouts/events
+Rendering events/index
+Completed in 3188ms (View: 2766, DB: 32) | 200 OK [http://localhost/events]
+
+
+Processing EventsController#show (for 127.0.0.1 at 2009-10-17 13:29:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/events
+Rendering events/show
+Completed in 312ms (View: 281, DB: 0) | 200 OK [http://localhost/events/1]
+
+
+Processing EventsController#index (for 127.0.0.1 at 2009-10-17 13:29:57) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM "events" [0m
+Rendering template within layouts/events
+Rendering events/index
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/events]
+
+
+Processing RisksController#index (for 127.0.0.1 at 2009-10-17 13:30:02) [GET]
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" [0m
+Rendering template within layouts/risks
+Rendering risks/index
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;35;1mGoal Load (0.0ms)[0m   [0mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;35;1mGoal Load (0.0ms)[0m   [0mSELECT * FROM "goals" WHERE ("goals"."id" = 2) [0m
+Completed in 250ms (View: 203, DB: 0) | 200 OK [http://localhost/risks]
