@@ -5,11 +5,15 @@
 
   <p>
     <%= f.label :event %><br />
-    <%= f.text_field :event %>
+    <%= @risk.event.description %>
   </p>
   <p>
     <%= f.label :goal %><br />
-    <%= f.text_field :goal %>
+    <%= @risk.goal.description %>
+  </p>
+  <p>
+    <%= f.label :risk %><br />
+    <%= f.text_area :description %>
   </p>
   <p>
     <%= f.submit 'Update' %>

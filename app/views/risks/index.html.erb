@@ -2,15 +2,11 @@
 
 <table>
   <tr>
-    <th>EventsNEW</th>
-    <th>Goal</th>
     <th>Risk</th>
   </tr>
 
 <% @risks.each do |risk| %>
   <tr>
-    <td><%=h risk.event.description %></td>
-    <td><%=h risk.goal.description %></td>
     <td><%=h risk.description %></td>
     <td><%= link_to 'Show', risk %></td>
     <td><%= link_to 'Edit', edit_risk_path(risk) %></td>

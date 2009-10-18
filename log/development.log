@@ -8256,3 +8256,317 @@ Rendering risks/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
   [4;35;1mGoal Load (0.0ms)[0m   [0mSELECT * FROM "goals" WHERE ("goals"."id" = 2) [0m
 Completed in 250ms (View: 203, DB: 0) | 200 OK [http://localhost/risks]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-18 23:04:03) [GET]
+Rendering home/index
+Completed in 6484ms (View: 6484, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RisksController#index (for 127.0.0.1 at 2009-10-18 23:05:49) [GET]
+  [4;36;1mRisk Load (16.0ms)[0m   [0;1mSELECT * FROM "risks" [0m
+Rendering template within layouts/risks
+Rendering risks/index
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mGoal Load (15.0ms)[0m   [0;1mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mGoal Load (0.0ms)[0m   [0;1mSELECT * FROM "goals" WHERE ("goals"."id" = 2) [0m
+Completed in 3516ms (View: 3376, DB: 31) | 200 OK [http://localhost/risks]
+
+
+Processing RisksController#destroy (for 127.0.0.1 at 2009-10-18 23:06:04) [DELETE]
+  Parameters: {"authenticity_token"=>"ACAN92DMl1kFtaRBbybPkeXgjEPAWRznY8smZCuWwx0=", "id"=>"2"}
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" WHERE ("risks"."id" = 2) [0m
+  [4;36;1mRisk Destroy (15.0ms)[0m   [0;1mDELETE FROM "risks" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/risks
+Completed in 609ms (DB: 15) | 302 Found [http://localhost/risks/2]
+
+
+Processing RisksController#index (for 127.0.0.1 at 2009-10-18 23:06:05) [GET]
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" [0m
+Rendering template within layouts/risks
+Rendering risks/index
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;35;1mGoal Load (0.0ms)[0m   [0mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+Completed in 172ms (View: 109, DB: 0) | 200 OK [http://localhost/risks]
+
+
+Processing RisksController#destroy (for 127.0.0.1 at 2009-10-18 23:06:09) [DELETE]
+  Parameters: {"authenticity_token"=>"ACAN92DMl1kFtaRBbybPkeXgjEPAWRznY8smZCuWwx0=", "id"=>"1"}
+  [4;36;1mRisk Load (0.0ms)[0m   [0;1mSELECT * FROM "risks" WHERE ("risks"."id" = 1) [0m
+  [4;35;1mRisk Destroy (0.0ms)[0m   [0mDELETE FROM "risks" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/risks
+Completed in 8469ms (DB: 0) | 302 Found [http://localhost/risks/1]
+
+
+Processing RisksController#index (for 127.0.0.1 at 2009-10-18 23:06:17) [GET]
+  [4;36;1mRisk Load (0.0ms)[0m   [0;1mSELECT * FROM "risks" [0m
+Rendering template within layouts/risks
+Rendering risks/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/risks]
+
+
+Processing RisksController#new (for 127.0.0.1 at 2009-10-18 23:06:25) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM "events" [0m
+  [4;36;1mGoal Load (0.0ms)[0m   [0;1mSELECT * FROM "goals" [0m
+Rendering template within layouts/risks
+Rendering risks/new
+Completed in 172ms (View: 78, DB: 0) | 200 OK [http://localhost/risks/new]
+
+
+Processing RisksController#create (for 127.0.0.1 at 2009-10-18 23:06:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ACAN92DMl1kFtaRBbybPkeXgjEPAWRznY8smZCuWwx0=", "risk"=>{"event_id"=>"1", "goal_id"=>"1"}}
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;35;1mGoal Load (0.0ms)[0m   [0mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+  [4;35;1mRisk Create (0.0ms)[0m   [0mINSERT INTO "risks" ("event_id", "updated_at", "description", "goal_id", "created_at") VALUES(1, '2009-10-18 19:06:30', 'В результате того, что на рынке появится новый конкурент, доля рынка не достигнет 30 (+/- 5)', 1, '2009-10-18 19:06:30')[0m
+Redirected to http://localhost:3000/risks/3
+Completed in 1000ms (DB: 0) | 302 Found [http://localhost/risks]
+
+
+Processing RisksController#show (for 127.0.0.1 at 2009-10-18 23:06:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mRisk Load (0.0ms)[0m   [0;1mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/show
+Completed in 78ms (View: 46, DB: 0) | 200 OK [http://localhost/risks/3]
+
+
+Processing RisksController#index (for 127.0.0.1 at 2009-10-18 23:06:35) [GET]
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" [0m
+Rendering template within layouts/risks
+Rendering risks/index
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;35;1mGoal Load (0.0ms)[0m   [0mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+Completed in 157ms (View: 125, DB: 0) | 200 OK [http://localhost/risks]
+
+
+Processing EventsController#show (for 127.0.0.1 at 2009-10-18 23:07:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/events
+Rendering events/show
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://localhost/events/1]
+
+
+Processing EventsController#index (for 127.0.0.1 at 2009-10-18 23:07:33) [GET]
+  [4;35;1mEvent Load (16.0ms)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/events
+Rendering events/index
+Completed in 688ms (View: 641, DB: 16) | 200 OK [http://localhost/events]
+
+
+Processing GoalsController#show (for 127.0.0.1 at 2009-10-18 23:07:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGoal Load (0.0ms)[0m   [0;1mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+Rendering template within layouts/goals
+Rendering goals/show
+Completed in 156ms (View: 109, DB: 0) | 200 OK [http://localhost/goals/1]
+
+
+Processing RisksController#edit (for 127.0.0.1 at 2009-10-18 23:09:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/edit
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;35;1mGoal Load (16.0ms)[0m   [0mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+Completed in 172ms (View: 109, DB: 16) | 200 OK [http://localhost/risks/3/edit]
+
+
+Processing RisksController#edit (for 127.0.0.1 at 2009-10-18 23:10:49) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mRisk Load (0.0ms)[0m   [0;1mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/edit
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mGoal Load (16.0ms)[0m   [0;1mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `descrition' for #<Risk:0x4972b84>) on line #16 of app/views/risks/edit.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :risk %><br />
+16:     <%= f.text_field :descrition %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Update' %>
+
+    app/views/risks/edit.html.erb:16
+    app/views/risks/edit.html.erb:3
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (265.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RisksController#edit (for 127.0.0.1 at 2009-10-18 23:11:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/edit
+  [4;36;1mEvent Load (16.0ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;35;1mGoal Load (0.0ms)[0m   [0mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+Completed in 875ms (View: 828, DB: 16) | 200 OK [http://localhost/risks/3/edit]
+
+
+Processing RisksController#edit (for 127.0.0.1 at 2009-10-18 23:11:30) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mRisk Load (0.0ms)[0m   [0;1mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/edit
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mGoal Load (0.0ms)[0m   [0;1mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://localhost/risks/3/edit]
+
+
+Processing RisksController#edit (for 127.0.0.1 at 2009-10-18 23:12:46) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/edit
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Events) on line #8 of app/views/risks/edit.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :event %><br />
+8:     <%= Events.find(:event) %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :goal %><br />
+
+    app/views/risks/edit.html.erb:8
+    app/views/risks/edit.html.erb:3
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (750.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RisksController#edit (for 127.0.0.1 at 2009-10-18 23:14:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mRisk Load (0.0ms)[0m   [0;1mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/edit
+
+ActionView::TemplateError (undefined method `description' for :event:Symbol) on line #8 of app/views/risks/edit.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :event %><br />
+8:     <%= :event.description %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :goal %><br />
+
+    app/views/risks/edit.html.erb:8
+    app/views/risks/edit.html.erb:3
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (922.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RisksController#edit (for 127.0.0.1 at 2009-10-18 23:17:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/edit
+
+ActionView::TemplateError (undefined local variable or method `event' for #<ActionView::Base:0x4ad75ec>) on line #8 of app/views/risks/edit.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :event %><br />
+8:     <%= event.description %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :goal %><br />
+
+    app/views/risks/edit.html.erb:8
+    app/views/risks/edit.html.erb:3
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (406.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RisksController#edit (for 127.0.0.1 at 2009-10-18 23:18:38) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mRisk Load (0.0ms)[0m   [0;1mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/edit
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mGoal Load (0.0ms)[0m   [0;1mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://localhost/risks/3/edit]
+
+
+Processing RisksController#update (for 127.0.0.1 at 2009-10-18 23:24:39) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"ACAN92DMl1kFtaRBbybPkeXgjEPAWRznY8smZCuWwx0=", "id"=>"3", "risk"=>{"description"=>"В результате того, что на рынке появится новый конкурент, доля рынка не достигнет 30% (+/- 5%)"}}
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+  [4;36;1mRisk Update (0.0ms)[0m   [0;1mUPDATE "risks" SET "description" = 'В результате того, что на рынке появится новый конкурент, доля рынка не достигнет 30% (+/- 5%)', "updated_at" = '2009-10-18 19:24:39' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/risks/3
+Completed in 531ms (DB: 0) | 302 Found [http://localhost/risks/3]
+
+
+Processing RisksController#show (for 127.0.0.1 at 2009-10-18 23:24:40) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/show
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/risks/3]
+
+
+Processing RisksController#index (for 127.0.0.1 at 2009-10-18 23:28:50) [GET]
+  [4;36;1mRisk Load (0.0ms)[0m   [0;1mSELECT * FROM "risks" [0m
+Rendering template within layouts/risks
+Rendering risks/index
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mGoal Load (0.0ms)[0m   [0;1mSELECT * FROM "goals" WHERE ("goals"."id" = 1) [0m
+Completed in 172ms (View: 141, DB: 0) | 200 OK [http://localhost/risks]
+
+
+Processing RisksController#show (for 127.0.0.1 at 2009-10-18 23:28:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mRisk Load (0.0ms)[0m   [0mSELECT * FROM "risks" WHERE ("risks"."id" = 3) [0m
+Rendering template within layouts/risks
+Rendering risks/show
+Completed in 328ms (View: 16, DB: 0) | 200 OK [http://localhost/risks/3]
